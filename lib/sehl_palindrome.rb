@@ -5,15 +5,11 @@ class String
     processed_content == processed_content.reverse
   end
 
-  def letters
-    self.scan(/[a-zA-Z]/).join
-  end
-
   private
 
     # Returns content for palindrome testing
     def processed_content
-      self.letters.downcase
+      scan(/[a-z]/i).join.downcase
     end
 end
 

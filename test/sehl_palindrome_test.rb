@@ -24,9 +24,5 @@ class SehlPalindromeTest < Minitest::Test
   def test_for_palindrome_with_punctuation
     assert "Madam, I'm Adam.".palindrome?
   end
-
-  def test_letters_method
-    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
-  end
   
 end
