@@ -6,6 +6,27 @@ class SehlPalindromeTest < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert true
   end
+
+  def test_for_non_palindrome
+    refute "apple".palindrome?
+  end
+
+  def test_for_literal_palindrome
+    assert "abba".palindrome?
+  end
+
+  def test_for_mixed_case_palindrome
+    assert "RaceCar".palindrome?
+  end
+
+  def test_for_palindrome_with_punctuation
+    assert "Madam, I'm Adam.".palindrome?
+  end
+
+  def test_letters_method
+    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
+  end
+  
 end
